@@ -3,7 +3,11 @@ package fes.aragon.exep;
 import java.lang.IndexOutOfBoundsException;
 
 
-
+/*
+ * A esto la ace falta arreglar el problema de el objeto IndiceFueraDeRango
+ * 
+ * 
+ * */
 public class Arreglos<E> {
     private int indice = 0;
     private final Object[] array_to_manipulate;
