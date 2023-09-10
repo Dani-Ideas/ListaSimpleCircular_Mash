@@ -1,6 +1,6 @@
-package Herramintas;
-package fes.aragon.exep;
-import java.lang.IndexOutOfBoundsException;
+package fes.aragon.utilerias.estaticas.arreglos;
+import fes.aragon.utilerias.estaticas.arreglos.IndiceFueraDeRango;
+
 
 
 /*
@@ -8,6 +8,7 @@ import java.lang.IndexOutOfBoundsException;
  * 
  * 
  * */
+@SuppressWarnings("unused")
 public class Arreglos<E> {
     private int indice = 0;
     private final Object[] array_to_manipulate;
@@ -72,7 +73,10 @@ public class Arreglos<E> {
     ////
     ////
     public void limpiar () {
-    	array_to_manipulate.finalize();/// por alguna razon no me deja usar el metodo de la clase padre Object
+    	for (int i =0; i<=array_to_manipulate.length-1;i++) {
+    		array_to_manipulate[i]=null;
+    	}
+    	//array_to_manipulate.finalize();/// por alguna razon no me deja usar el metodo de la clase padre Object
     }
     public E primero () throws IndiceFueraDeRango{
     	if (array_to_manipulate[0]!=null) {
