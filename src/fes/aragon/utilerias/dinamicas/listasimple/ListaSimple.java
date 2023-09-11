@@ -148,13 +148,5 @@ public class ListaSimple<E> {
 		}else {
 	        throw new NoSuchElementException("La lista está vacía. No se puede eliminar ningún valor.");
 	    }
-	}
-	public boolean transfomacionCircular() {
-		if (header.equals(null))
-			return false;
-		else {
-			cola.setNext(header);
-			return true;
-		}
 	} 
 }

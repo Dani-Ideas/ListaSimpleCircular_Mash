@@ -3,12 +3,13 @@ package Herramintas;
 import java.util.Random;
 
 import fes.aragon.utilerias.dinamicas.listasimple.ListaSimple;
+import fes.aragon.utilerias.dinamicas.listasimple.ListaSimpleCircular;
 
 public class Herramientas {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ListaSimple<Integer> lista1=new ListaSimple<>();
+		ListaSimpleCircular<Integer> lista1=new ListaSimpleCircular<Integer>();
 		//ListaSimple<Integer> lista2=new ListaSimple<>();
 		Random numeberRandomGenerate= new Random();
 		int contador=0;
