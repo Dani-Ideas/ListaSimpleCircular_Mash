@@ -9,15 +9,33 @@ public class Herramientas {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ListaSimple<Integer> lista1=new ListaSimple<>();
-		ListaSimple<Integer> lista2=new ListaSimple<>();
+		//ListaSimple<Integer> lista2=new ListaSimple<>();
 		Random numeberRandomGenerate= new Random();
-		for (int i=0; i<100; i++) {
+		int contador=0;
+		for (int i=0; i<3; i++) {
 			int numberRandom= numeberRandomGenerate.nextInt(50,121);
-			lista2.agregarEnCabeza(numberRandom);
+			//lista2.agregarEnCabeza(numberRandom);
 			lista1.agregarEnCola(numberRandom);
 		}
 		lista1.imprimirElemetos();
+		
 		System.out.println("--------------------------");
-		lista2.imprimirElemetos();
+		System.out.println(lista1.transfomacionCircular());
+		System.out.println("--------------------------\n \n \n \n \n");
+		
+		while (lista1.transfomacionCircular()&&contador <=3) {
+			System.out.println("Se viene en "+(3-contador)+":\n(づ｡◕‿‿◕｡)づ(づ｡◕‿‿◕｡)づ(づ｡◕‿‿◕｡)づ(づ｡◕‿‿◕｡)づ(づ｡◕‿‿◕｡)づ\n( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)( ͡° ͜ʖ ͡°)");
+            try {
+            	Thread.sleep(5000); 
+            } catch (InterruptedException e) {
+                
+                e.printStackTrace();
+            }
+            
+            contador++;
+        }
+		lista1.imprimirElemetos();
+		
+		//lista2.imprimirElemetos();
 	}
 }
