@@ -4,22 +4,22 @@ public class ListaSimpleCircular<E> extends ListaSimple<E>{
 	
 	
 	public void imprimirElemetos() {
-	    Nodo<E> temporal = header;
+	    Nodo<E> temporal = cabeza;
 	    int count = 0;
 	    while (temporal != null && count < longitud) {
-	        System.out.println(temporal.getData());
-	        temporal = temporal.getNext();
+	        System.out.println(temporal.getDato());
+	        temporal = temporal.getSiguiente();
 	        count++;
-	        if (temporal == header) {
+	        if (temporal == cabeza) {
 	            break;
 	        }
 	    }
 	}
 	public boolean transfomacionCircular() {
-		if (header.equals(null))
+		if (cabeza.equals(null))
 			return false;
 		else {
-			cola.setNext(header);
+			cola.setSiguiente(cabeza);
 			return true;
 		}
 	}
